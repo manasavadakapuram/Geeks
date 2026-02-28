@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idea Launch</title>
+
+<style>
+
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0a66c2;
+}
+
+#navlinks a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.active {
+    background: #0a66c2;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* HERO */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+}
+
+#small-head {
+    color: #0a66c2;
+    font-weight: 600;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.highlight {
+    color: #0a66c2;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: auto;
+    color: #555;
+    font-size: 18px;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 30px;
+}
+
+.primary {
+    background: #0a66c2;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.secondary {
+    background: white;
+    border: 2px solid #0a66c2;
+    color: #0a66c2;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background: #004182;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background: #f9fafc;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+/* DARK MODE */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark #navbar {
+    background: #1e1e1e;
+}
+
+.dark #hero {
+    background: #1e1e1e;
+}
+
+.dark .feature-box {
+    background: #2a2a2a;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar">
+    <a id="logo" href="profile.html">🚀 create profile</a>
+
+    <div id="navlinks">
+        <a href="#">Home</a>
+        <a href="viewProfile.html">View Profile</a>
+        <a href="form.html">Post Idea</a>
+        <a href="#">About Us</a>
+    </div>
+
+    <button class="active" onclick="toggleDarkMode()">Dark Mode</button>
+</div>
+
+
+<!-- HERO SECTION -->
+<section id="hero">
+    <p id="small-head">🌟 For Young Entrepreneurs</p>
+
+    <h1>
+        Turn Your Bold Ideas Into<br>
+        <span class="highlight">Reality</span>
+    </h1>
+
+    <p class="hero-description">
+        The launchpad where visionary founders post ideas,
+        connect with investors, and build the future — together.
+    </p>
+
+    <div class="buttons">
+        <a href="form.html">
+            <button class="primary">🚀 Post Your Idea →</button>
+        </a>
+        <a href="explore.html">
+    <button class="secondary">Explore Ideas</button>
+</a>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature-box">
+        <h3>💡 Share Your Vision</h3>
+        <p>Post innovative startup ideas and gain valuable feedback.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>🤝 Connect & Collaborate</h3>
+        <p>Meet investors, developers, and co-founders.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>🚀 Build & Scale</h3>
+        <p>Turn your concept into a scalable startup.</p>
+    </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+    <h2>Ready To Launch Your Dream Startup?</h2>
+    <a href="form.html">
+        <button class="primary">Start Now</button>
+    </a>
+</section>
+
+
+<script>
+
+/* Dark Mode Toggle */
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+
+/* Explore Ideas Action */
+function exploreIdeas() {
+    alert("Idea feed coming soon 🚀");
+}
+
+/* Simple Fade Animation */
+window.addEventListener("scroll", function() {
+    const boxes = document.querySelectorAll(".feature-box");
+    boxes.forEach(box => {
+        const position = box.getBoundingClientRect().top;
+        if(position < window.innerHeight - 100){
+            box.style.opacity = "1";
+            box.style.transform = "translateY(0)";
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

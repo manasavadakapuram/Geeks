@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idea Launch</title>
+
+<style>
+/* ===== GLOBAL ===== */
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f3f2ef;
+}
+
+/* ===== NAVBAR ===== */
+#navbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+}
+
+#logo{
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#0077b5;
+}
+
+#navlinks a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+#navlinks a:hover{
+    color:#0077b5;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.active{
+    background:#0077b5;
+    color:white;
+}
+
+.primary{
+    background:#0077b5;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    border:1px solid #0077b5;
+    color:#0077b5;
+}
+
+/* ===== HERO SECTION ===== */
+#hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(to right,#0077b5,#00a0dc);
+    color:white;
+}
+
+.highlight{
+    color:yellow;
+}
+
+.buttons{
+    margin-top:20px;
+}
+
+/* ===== EXPLORE SECTION ===== */
+#exploreSection{
+    display:none;
+    padding:40px 0;
+}
+
+.feed-container{
+    width:600px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.profile-pic{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#0077b5;
+    margin-right:10px;
+}
+
+.name{
+    font-weight:bold;
+}
+
+.role{
+    font-size:12px;
+    color:gray;
+}
+
+.problem{
+    margin-top:10px;
+}
+
+.achievement{
+    background:#e8f3ff;
+    padding:10px;
+    margin-top:10px;
+    border-left:4px solid #0077b5;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="navbar">
+    <a id="logo" href="profile.html">Profile</a>
+    <div id="navlinks">
+        <a href="#">Home</a>
+        <a href="viewProfile.html">view profile</a>
+        <a href="#">PostIdea</a>
+        <a href="#">AboutUs</a>
+    </div>
+    <a href="post.html"><button id="logo" class="active">🚀Launch Your Idea</button></a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+    <p id="small-head">🚀 ForYoungeEntreprenuers</p>
+    <h1>Turn Your Bold Ideas into<br>
+    <span class="highlight">Reality</span></h1>
+    <p>The launchpad where young visionaries post Idea-connect with backers,and build future -together</p>
+
+    <div class="buttons">
+        <a href="form.html"><button class="primary">🚀 Post Your Idea →</button></a>
+        <button class="secondary" onclick="showExplore()">Explore Ideas</button>
+    </div>
+</section>
+
+<!-- EXPLORE SECTION -->
+<section id="exploreSection">
+    <div class="feed-container">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="profile-pic"></div>
+                <div>
+                    <div class="name">GreenTech Farmers</div>
+                    <div class="role">AgriTech Startup • Hyderabad</div>
+                </div>
+            </div>
+            <div class="problem">
+                🌾 Problem: Farmers lack real-time crop disease detection.
+            </div>
+            <div class="achievement">
+                🏆 Achievement: Helped 5,000+ farmers increase yield by 30%.
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="profile-pic"></div>
+                <div>
+                    <div class="name">FarmDirect</div>
+                    <div class="role">Supply Chain Startup • Bangalore</div>
+                </div>
+            </div>
+            <div class="problem">
+                🚜 Problem: Farmers don’t get fair prices from middlemen.
+            </div>
+            <div class="achievement">
+                🏆 Achievement: Connected 2,000 farmers directly to retailers.
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="profile-pic"></div>
+                <div>
+                    <div class="name">Smart Irrigation AI</div>
+                    <div class="role">AI Startup • Chennai</div>
+                </div>
+            </div>
+            <div class="problem">
+                💧 Problem: Water wastage in traditional irrigation methods.
+            </div>
+            <div class="achievement">
+                🏆 Achievement: Reduced water usage by 40% using AI sensors.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function showExplore(){
+    document.getElementById("hero").style.display="none";
+    document.getElementById("exploreSection").style.display="block";
+}
+</script>
+
+</body>
+</html>

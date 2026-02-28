@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Your Startup Idea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Form Section */
+/*.form-section {
+    width: 80%;
+    margin: 40px auto;
+    padding: 50px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent for contrast 
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    color: white; /* Ensure text is readable */
+
+/* Form Inputs 
+input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* placeholder visible 
+}
+
+/* Focus effect 
+input:focus, textarea:focus, select:focus {
+    border: 1px solid #00c6ff;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Buttons 
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 114, 255, 0.6);
+}
+
+/* AI Output Box 
+#output {
+    margin-top: 20px;
+    padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.8); /* Dark container for readability 
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+#output h3 {
+    color: #00c6ff; /* Highlight AI title 
+    margin-bottom: 10px;
+}
+
+#output p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#output strong {
+    color: #00c6ff; /* Highlights labels like "Problem" or "Features" 
+}*/
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a192f, #0f3057, #16213e);
+            background-size: 300% 300%;
+            animation: darkBlueFlow 12s ease infinite;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        @keyframes darkBlueFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Soft Blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .blob1 {
+            width: 350px;
+            height: 350px;
+            background: #1b3c73;
+            top: 10%;
+            left: 5%;
+        }
+
+        .blob2 {
+            width: 400px;
+            height: 400px;
+            background: #274c77;
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-40px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 60px;
+            animation: slideDown 1s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        nav h2 {
+            font-weight: 700;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #00c6ff;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Form Section */
+       .form-section{
+            width: 50%; 
+            margin: 40px auto; 
+            padding: 50px; 
+            border-radius: 25px; 
+             backdrop-filter: blur(25px); 
+             background: rgba(255,255,255,0.05); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+             animation: fadeIn 2s ease;
+    
+      
+        }
+
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            outline: none;
+            background: rgba(255,255,255,0.08);
+            color: white;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border: 1px solid #00c6ff;
+            box-shadow: 0 0 15px rgba(0,198,255,0.6);
+            transform: scale(1.02);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,114,255,0.6);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.8;
+        }
+        #output {
+   /* margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);*/
+    margin-top: 20px;
+    padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.8);/* Dark container for readability */
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<nav>
+    <h2>🚀 ENTREPRENEURS hub</h2>
+    <div>
+        <a href="lovable.html">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Login</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Launch Your Dream Startup</h1>
+    <p>Share your idea. Build your team. Change the world.</p>
+</div>
+
+<div class="form-section">
+
+        <form>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title">
+        </div>
+
+        <div class="form-group">
+            <label>Tagline</label>
+            <input type="text" name="tagline">
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <select name="category">
+                <option>Technology</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+                <option>FinTech</option>
+                <option>E-Commerce</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Problem Statement</label>
+            <textarea name="problem" rows="3" id="problem"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Solution</label>
+            <textarea name="solution" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Target Audience</label>
+            <textarea name="targetAudience" rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Skills Required</label>
+            <textarea name="skills" rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Expected Contribution Type</label>
+            <select name="contributionType">
+                <option>Co-founder</option>
+                <option>Intern</option>
+                <option>Part-time</option>
+                <option>Full-time</option>
+                <option>Advisor</option>
+            </select>
+        </div>
+
+       <button type="button" id="postBtn">🚀 Post Idea</button>
+     
+    </form>
+     <div id="output" defer></div>
+</div>
+
+<footer>
+    © 2026 ENTREPRENEURS hub | Built for Young Entrepreneurs
+</footer>
+<script src="chat.js"></script>
+<script src="API.js"></script>
+document.getElementById("postBtn").addEventListener("click", function () {
+</body>
+</html>
